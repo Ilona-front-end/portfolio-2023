@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build --emptyOutDir",
     "preview": "vite preview",
-    "format": "npx prettier --write src/**/*.{html,css,js}",
+    "format": "npx prettier --write 'src/**/*.{html,css,js}' '*.js'",
+    "lint": "npx eslint 'src/js/'",
+    "lint-fix": "npx eslint --fix 'src/js/'",
     "prepare": "husky install"
   },
   "devDependencies": {
