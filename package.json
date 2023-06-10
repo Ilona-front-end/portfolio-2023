@@ -5,17 +5,25 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --emptyOutDir",
     "preview": "vite preview",
-    "format": "npx prettier --write src/**/*.{html, css, js}"
+    "format": "npx prettier --write src/**/*.{html,css,js}",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.2",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
     "tailwindcss": "^3.3.2",
     "vite": "^4.3.9"
+  },
+    "lint-staged": {
+    "src/**/*.js": "eslint",
+    "src/**/*.{html,css,js}": "npm run format",
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
