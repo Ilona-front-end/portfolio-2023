@@ -13,6 +13,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^8.8.0",
@@ -23,7 +24,7 @@
     "tailwindcss": "^3.3.2",
     "vite": "^4.3.9"
   },
-    "lint-staged": {
+  "lint-staged": {
     "src/**/*.js": "eslint",
     "src/**/*.{html,css,js}": "npm run format",
     "**/*": "prettier --write --ignore-unknown"
